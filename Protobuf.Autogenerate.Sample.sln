@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protogen", "protogen", "{C6
 		tools\protogen\protobuf-net.Reflection.dll = tools\protogen\protobuf-net.Reflection.dll
 		tools\protogen\protogen.deps.json = tools\protogen\protogen.deps.json
 		tools\protogen\protogen.dll = tools\protogen\protogen.dll
+		tools\protogen\protogen.ps1 = tools\protogen\protogen.ps1
 		tools\protogen\protogen.runtimeconfig.dev.json = tools\protogen\protogen.runtimeconfig.dev.json
 		tools\protogen\protogen.runtimeconfig.json = tools\protogen\protogen.runtimeconfig.json
 	EndProjectSection

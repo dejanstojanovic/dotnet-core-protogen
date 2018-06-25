@@ -1,0 +1,5 @@
+﻿message EmailMessage { 
+  optional string subject = 1; 
+  optional string from = 2; 
+  optional string body = 3; 
+}
