@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <Target Name="protogen" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet $(SolutionDir)tools\protogen\protogen.dll Person.proto --proto_path=$(ProjectDir)Protos --csharp_out=$(ProjectDir)Models --package=$(ProjectName)Models" />
+  </Target>
+
+</Project>
