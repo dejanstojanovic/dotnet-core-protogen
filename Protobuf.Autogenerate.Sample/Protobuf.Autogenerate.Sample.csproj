@@ -6,14 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Protos\EmailMessage.proto" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Protos\EmailMessage.proto" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
 
@@ -22,7 +14,7 @@
   </ItemGroup>
 
   <Target Name="protogen" BeforeTargets="BeforeBuild">
-    <Exec Command="dotnet $(SolutionDir)tools\protogen\protogen.dll Person.proto --proto_path=$(ProjectDir)Protos --csharp_out=$(ProjectDir)Models --package=$(ProjectName)Models" />
+    <Exec Command="powershell -file $(SolutionDir)tools\protogen\protogen.ps1 -protogenPath $(SolutionDir)tools\protogen\protogen.dll -protoFolder $(ProjectDir)Protos -modelFolder $(ProjectDir)Models -namespace $(ProjectName).Models" />
   </Target>
 
 </Project>
