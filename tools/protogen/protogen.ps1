@@ -20,7 +20,7 @@ foreach($protoFile in $protoFiles){
 
     $outFilePath = $modelFolder + "\" + $protoFile.Name
 
-    if(!Test-Path($outFilePath)){
+    if(!(Test-Path -Path $outFilePath)){
 
         $protoPathParam = "--proto_path=" + $protoFolder
         $csharpOutParam = "--csharp_out=" + $modelFolder
