@@ -18,7 +18,7 @@ foreach($protoFile in $protoFiles){
 
         $protoPathParam = "--proto_path=" + $protoFolder
         $csharpOutParam = "--csharp_out=" + $modelFolder
-        $packageParam = "--package=" + $namespace +".Models"
+        $packageParam = "--package=" + $namespace
 
 	    Start-Process -FilePath "dotnet" -ArgumentList $protogenPath , $protoFile.Name, $protoPathParam , $csharpOutParam , $packageParam
     }
