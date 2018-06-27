@@ -8,12 +8,6 @@ $protogenPath,
 [Parameter(Mandatory=$true)]    
 [string]$namespace
  )
- 
-  
-#$protogenPath = "D:\Github\dotnet-core-protogen\tools\protogen\protogen.dll"
-#$protoFolder = "D:\Github\dotnet-core-protogen\Protobuf.Autogenerate.Sample\Protos"
-#$modelFolder = "D:\Github\dotnet-core-protogen\Protobuf.Autogenerate.Sample\Models"
-#$namespace = "Protobuf.Autogenerate.Sample.Models"
 
 $protoFiles = get-childitem $protoFolder -recurse -force -include *.proto   
 foreach($protoFile in $protoFiles){
