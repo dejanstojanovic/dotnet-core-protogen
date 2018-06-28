@@ -12,7 +12,7 @@ $protogenPath,
 $protoFiles = get-childitem $protoFolder -recurse -force -include *.proto   
 foreach($protoFile in $protoFiles){
 
-    $outFilePath = $modelFolder + "\" + $protoFile.Name
+    $outFilePath = $modelFolder + "\" + $protoFile.BaseName + ".cs"
 
     if(!(Test-Path -Path $outFilePath)){
 
